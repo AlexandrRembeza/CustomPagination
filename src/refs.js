@@ -1,4 +1,4 @@
-export default refs = {
+const refs = {
   form: document.querySelector('.form'),
   moviesList: document.querySelector('.movies-list'),
   paginationList: document.querySelector('.pagination-list'),
@@ -6,3 +6,5 @@ export default refs = {
   prevButton: document.querySelector('.pagination-item:first-child button'),
   nextButton: document.querySelector('.pagination-item:last-child button'),
 };
+
+export default refs;
