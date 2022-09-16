@@ -36,7 +36,8 @@ async function onSubmit(e) {
   }
   query = value;
   refs.moviesList.innerHTML = '';
-  refs.moviesList.insertAdjacentHTML('beforeend', createMoviesMarkup(movies));
+  const markup = await createMoviesMarkup(movies);
+  refs.moviesList.insertAdjacentHTML('beforeend', markup);
   changePaginationMarkup(page, false);
   refs.form.reset();
 }
@@ -51,7 +52,8 @@ async function loadNextPage(e) {
 
   const movies = await fetchMovies(query, page);
   refs.moviesList.innerHTML = '';
-  refs.moviesList.insertAdjacentHTML('beforeend', createMoviesMarkup(movies));
+  const markup = await createMoviesMarkup(movies);
+  refs.moviesList.insertAdjacentHTML('beforeend', markup);
 
   const visible = e.target.dataset.visible ? true : false;
   changePaginationMarkup(page, visible);

@@ -35,7 +35,7 @@ export function lastPagesPagination(page, totalPages) {
         page - 1
       }" disabled="true">&#65124</button></li>
     <li class="pagination-item">
-      <button class="pagination-button active" type="button" data-page="${
+      <button class="pagination-button active pagination-dots" type="button" data-page="${
         totalPages - 8
       }">...</button>
     </li>
@@ -114,7 +114,7 @@ export function pageLessThanNine(page) {
       <button class="pagination-button" type="button" data-page="8">8</button>
     </li>
     <li class="pagination-item">
-      <button class="pagination-button" type="button" data-page="9">...</button>
+      <button class="pagination-button pagination-dots" type="button" data-page="9">...</button>
     </li>
     <li class="pagination-item">
       <button class="pagination-button" type="button" data-page="${
@@ -132,7 +132,7 @@ export function betweenFirstAndLastPages(page, totalPages) {
       <button class="pagination-button" type="button" data-page="1">1</button>
     </li>
     <li class="pagination-item">
-      <button class="pagination-button" type="button" data-page="${
+      <button class="pagination-button pagination-dots" type="button" data-page="${
         page - 5
       }">...</button>
     </li>
@@ -160,7 +160,7 @@ export function betweenFirstAndLastPages(page, totalPages) {
       }">${page + 4}</button>
     </li>
     <li class="pagination-item">
-      <button class="pagination-button" type="button" data-page="${
+      <button class="pagination-button pagination-dots" type="button" data-page="${
         page + 5
       }">...</button>
     </li>
